@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hover-effect:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .animate-service, .animate-about, .animate-contact {
+            animation: fadeInUp 1s ease-in-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .service-card img {
+            transition: transform 0.3s ease-in-out;
+        }
+        .service-card:hover img {
+            transform: scale(1.05);
+        }
+        /* Popup styling */
+        .hidden { display: none; }
+        .popup-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .popup-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">TravelX</h1>
+        <div class="space-x-4">
+            <a href="#home" class="bg-blue-500 text-white px-4 py-2 rounded hover-effect">Home</a>
+            <a href="#about" class="bg-blue-500 text-white px-4 py-2 rounded hover-effect">About</a>
+            <a href="#services" class="bg-blue-500 text-white px-4 py-2 rounded hover-effect">Services</a>
+            <a href="#contact" class="bg-blue-500 text-white px-4 py-2 rounded hover-effect">Contact</a>
+           
+        </div>
+    </nav>
+
+    <header id="home" class="h-screen flex items-center justify-center bg-cover bg-center relative" 
+    style="background-image: url('travelling.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+
+<!-- Adjusted Overlay for Better Visibility -->
+<div class="absolute inset-0 bg-black bg-opacity-20 backdrop-blur-sm"></div>
+
+<div class="text-center text-white relative z-10">
+    <h1 class="text-5xl font-bold drop-shadow-lg">Explore the World</h1>
+    <p class="mt-4 text-lg drop-shadow-md">Book your dream vacation today!</p>
+    <a href="#services" class="mt-6 inline-block bg-blue-500 px-6 py-3 rounded text-white shadow-lg hover:bg-blue-600 transition">
+        Get Started
+    </a>
+</div>
+</header>
+
+
+
+    <section id="about" class="py-16 text-center bg-blue-100 animate-about">
+        <h2 class="text-4xl font-bold text-blue-800">About Us</h2>
+        <p class="mt-4 text-gray-700 font-semibold">We provide the best travel experiences tailored for you.</p>
+        <p class="mt-2 text-gray-600">Our mission is to make travel seamless and enjoyable. Our vision is to connect travelers with amazing destinations.</p>
+    </section>
+
+    <section id="services" class="py-16 bg-gray-200 text-center animate-service">
+        <h2 class="text-4xl font-bold text-purple-700">Our Services</h2>
+        <div class="mt-6 flex flex-wrap justify-center gap-6">
+            <div class="bg-white p-6 rounded shadow w-64 service-card">
+                <img src="flight.jpg" alt="Flight Booking" class="w-full h-32 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-4">Flight Booking</h3>
+                <p class="mt-2 text-gray-600">Get the best flight deals.</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow w-64 service-card">
+                <img src="hotel.jpg" alt="Hotel Reservations" class="w-full h-32 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-4">Hotel Reservations</h3>
+                <p class="mt-2 text-gray-600">Stay at the best places.</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow w-64 service-card">
+                <img src="tourr.jpg" alt="Tour Packages" class="w-full h-32 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-4">Tour Packages</h3>
+                <p class="mt-2 text-gray-600">Explore curated travel experiences.</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow w-64 service-card">
+                <img src="car.jpg" alt="Car Rentals" class="w-full h-32 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-4">Car Rentals</h3>
+                <p class="mt-2 text-gray-600">Convenient transport for your trip.</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow w-64 service-card">
+                <img src="cruice.jpg" alt="Cruise Trips" class="w-full h-32 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-4">Cruise Trips</h3>
+                <p class="mt-2 text-gray-600">Luxury cruises to exotic destinations.</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow w-64 service-card">
+                <img src="adv.jpg" alt="Adventure Travel" class="w-full h-32 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-4">Adventure Travel</h3>
+                <p class="mt-2 text-gray-600">Experience thrilling outdoor adventures.</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow w-64 service-card">
+                <img src="visa.jpg" alt="Visa Assistance" class="w-full h-32 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-4">Visa Assistance</h3>
+                <p class="mt-2 text-gray-600">Hassle-free visa processing services.</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow w-64 service-card">
+                <img src="trav.jpg" alt="Travel Insurance" class="w-full h-32 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-4">Travel Insurance</h3>
+                <p class="mt-2 text-gray-600">Secure your journey with travel insurance.</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow w-64 service-card">
+                <img src="local.jpg" alt="Local Cuisine Tours" class="w-full h-32 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-4">Local Cuisine Tours</h3>
+                <p class="mt-2 text-gray-600">Taste the best local delicacies on your travels.</p>
+            </div>
+            <div class="bg-white p-6 rounded shadow w-64 service-card">
+                <img src="guide.jpg" alt="Guided Tours" class="w-full h-32 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-4">Guided Tours</h3>
+                <p class="mt-2 text-gray-600">Explore destinations with expert tour guides.</p>
+            </div>
+        </div>
+    </section>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 text-center bg-green-100 animate-contact">
+        <h2 class="text-4xl font-bold text-green-800">Contact Us</h2>
+        <p class="mt-4 text-gray-700 font-semibold">Reach out for the best travel deals!</p>
+        <form id="contactForm" class="mt-6 max-w-md mx-auto bg-white p-6 rounded shadow">
+            <input type="text" id="name" placeholder="Your Name" class="w-full p-2 border border-gray-300 rounded mb-4">
+            <input type="email" id="email" placeholder="Your Email" class="w-full p-2 border border-gray-300 rounded mb-4">
+            <textarea id="message" placeholder="Your Message" class="w-full p-2 border border-gray-300 rounded mb-4"></textarea>
+            <button type="button" onclick="validateForm()" class="bg-green-500 text-white px-4 py-2 rounded">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="bg-gray-800 text-white text-center p-4 mt-8">
+        
+    </footer>
+
+    <!-- Popup -->
+    <div id="popup" class="hidden popup-bg">
+        <div class="popup-box">
+            <p id="popupMessage" class="text-lg font-semibold"></p>
+            <button onclick="closePopup()" class="mt-4 bg-green-500 text-white px-4 py-2 rounded">OK</button>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var message = document.getElementById("message").value.trim();
+            var popup = document.getElementById("popup");
+            var popupMessage = document.getElementById("popupMessage");
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill out all fields.");
+            } else {
+                popupMessage.innerText = "Message sent successfully!";
+                popup.classList.remove("hidden");
+                document.getElementById("contactForm").reset();
+            }
+        }
+
+        function closePopup() {
+            document.getElementById("popup").classList.add("hidden");
+        }
+    </script>
+</body>
+</html>
